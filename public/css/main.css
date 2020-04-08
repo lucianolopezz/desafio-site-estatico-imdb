@@ -1,0 +1,341 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Montserrat;
+}
+
+.container {
+	position: relative;
+	margin: 0px auto;
+	max-width: 960px;	
+}
+
+header {
+	background-attachment: fixed;
+    background-image: url(../img/capa-madmax2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+header:after {
+	background: linear-gradient( 0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 212, 255, 0) 75% );
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+header .container {	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+header nav {
+	display: flex;	
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	z-index: 2;
+	position: relative;
+}
+
+header .menu {
+	display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+	display: inline-block;
+	margin: 0px 25px;
+}
+
+header nav ul li a, section .catalog-menu li a {
+	color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+header nav ul li a:hover {
+	color: #e4bb23;
+}
+
+header nav .user {
+	display: flex;
+	align-items: center;;
+}
+
+header nav .user img {
+	border-radius: 100%;
+	width: 45px;
+}
+
+header nav .user span {
+	margin-left: 10px;
+	color: white;
+	font-size: 0.8em;
+    font-weight: bold
+}
+
+header .content {
+	position: relative;
+	z-index: 2;
+}
+
+header .content .title {
+	color: white;
+	font-weight: bold;
+	font-size: 4em;
+	line-height: 1.2em;
+	margin: 0px;
+	text-transform: uppercase;
+}
+
+header .content .genre {	
+	margin: 15px 0 30px;
+}
+
+header .content .genre a {
+	color: white;
+	text-decoration: none;
+	margin-right: 15px;
+	transition: all 0.2s ease-in-out;
+}
+
+header .content .genre a:hover {
+	color: #e4bb23;
+}
+
+header .content .button {
+	max-width: 230px;
+	display: inline-block;
+    padding: 15px 50px;
+    color: #000;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: #e4bb23;
+    border-radius: 40px;
+	position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+header .content .button i {
+	font-size: 18px;
+}
+
+header .content .button:hover {
+	background-color: #bc9a1d;
+}
+
+header .content .info p {
+	color: white;
+}
+
+header .content .info p:last-child {
+    color: #bc9a1d;
+}
+
+section {
+	background-color: #f2f2f2;
+    width: 100%;
+}
+
+section .catalog-menu {
+	align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 20px;	
+}
+
+section nav ul li {
+	margin: 0 20px;
+}
+
+section .catalog-menu li a {
+	color: #e4bb23;
+    display: inline-block;
+	padding: 25px 0;
+	text-decoration: none;
+}
+
+section nav ul li a:hover {
+	box-shadow: inset 0 -1px 0 #e4bb23;
+}
+
+.catalog-list {
+	align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.catalog-list li {
+	background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    overflow: hidden;
+    width: 24%;
+}
+
+.catalog-list li figure {
+	margin: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.catalog-list li figure .movie-info {
+	align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    padding: 80px 20px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1;
+}
+
+.catalog-list li:hover .movie-info {
+	opacity: 1;
+	visibility: visible;
+}
+
+.catalog-list li figure .movie-info h3 {	
+	color: #e4bb23;
+}
+
+.catalog-list li figure .movie-info a {
+	color: white;
+	font-size: 3em;
+    transition: all 0.2s ease-in-out;
+}
+
+.catalog-list li figure .movie-info a:hover {
+	color: #e4bb23;
+}
+
+.catalog-list li figure img{
+	width: 100%;
+    height: auto;
+}
+
+.catalog-list .movie-synopsis {
+	padding: 10px;
+	width: 100%;
+}
+
+.catalog-list .movie-synopsis h3 {
+	font-size: 0.8em;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.movie-synopsis .synopsis-genre {
+	margin: 10px 0;
+    display: flex;
+}
+
+.movie-synopsis .synopsis-genre a {
+	text-decoration: none;
+    font-size: 0.8em;
+    color: #e4bb23;
+}
+
+.movie-synopsis .synopsis-genre a:hover {
+	text-decoration: underline;
+}
+
+.movie-synopsis .movie-note {
+	margin: 0;
+    align-items: center;
+    display: flex;
+    font-size: 1em;
+    font-weight: bold;
+    justify-content: space-between;	
+}
+
+.movie-synopsis .movie-note i {
+	color: #ccc;
+    cursor: pointer;
+}
+
+.movie-synopsis .movie-note i:hover {
+	color: #e74c3c;
+}
+
+footer {
+	background-color: #fff;
+    color: #bababa;
+    padding: 20px 0;
+    text-align: center;
+	width: 100%;
+}
+
+footer .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+footer .container .social-medias {
+	display: flex;
+	width: 150px;
+	justify-content: space-between;
+}
+
+footer .container .social-medias a {
+	font-size: 1.5em;
+    color: #bababa;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out
+}
+
+.social-medias .icon-twitter:hover {
+	color: #55acee;
+}
+
+.social-medias .icon-facebook:hover {
+	color: #3b5998;
+}
+
+.social-medias .icon-instagram:hover {
+	color: #e95950;
+}
